@@ -1,0 +1,35 @@
+alert('It is the zombie apocolypse.Your are looting a store and suddelnly a zombie burst through the door ');
+      
+var weapon = prompt('You search around franticaly for a weapon. What do you choose? A bow, an arrow, an axe or a rubber chicken?');
+var randomNumber = Math.round(Math.random());//to give you a 50/50 chance of winning
+
+alert('You attack the zombie with your' + ' ' + weapon);
+
+//scenarios depending on the coin toss...
+if (randomNumber === 0 ){
+  alert('The zombie bites you, you lose!');
+} else if (randomNumber === 1){
+  alert('You kill the zombie ' + weapon + " you win!!");
+  alert('You sigh in relief and continue pillaging the store!');
+  alert('You then leave the store and see a massive hord of zombies that heard the niose of your encounter!')
+}
+//if you survive...
+if (randomNumber === 1) {
+  var choiceOne=prompt('you: run, or act like a zombie?')
+var run = "run";
+var act = "act like a zombie";
+
+//run
+if (choiceOne === run) {
+  if (randomNumber === 0){
+    alert('you trip and get killed')
+  }
+  else if (randomNumber === 1) {
+    alert('you flee and get back to your hide out');
+  }
+}
+//act like a zombie
+if (choiceOne === act) {
+    alert('The zombies see past your ruse and eat you! Are you that stupid?');
+  }
+}
